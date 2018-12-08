@@ -8,12 +8,13 @@ Time spent: 25 hours spent in total
 1. Vulnerability: Stored XSS in WP
     In a Post XSS <script>alert(document.cookie);</script> in the comments section:
     
-  - [ ] GIF Walkthrough: 
+  - [ ] GIF Walkthrough: <img src="https://github.com/gvero89/WordPress_vs_Kali/blob/master/XSS%20attack.gif" width=800>
+
  
 2. Vulnerability: Authenticated Stored Cross-Site Scripting
     Steps: Select Post -> Add new post -> <a onmouseover="alert('I got you!')">click here</a> -> click preview
     
-  - [ ] GIF Walkthrough: 
+  - [ ] GIF Walkthrough: <img src="https://github.com/gvero89/WordPress_vs_Kali/blob/master/Cross%20Site%20Scripting.gif" width=800>
 
 3. Vulnerability: User Enumeration
     Steps: WordPress login page -> In admin write: username and password field will stay empty. 
@@ -22,7 +23,7 @@ Time spent: 25 hours spent in total
            An Error will show: password you entered for the username admin is incorrect. 
            When a randomly username and password is added, shows the error which is invalid username.
            
-  - [ ] GIF Walkthrough: 
+  - [ ] GIF Walkthrough: <img src="https://github.com/gvero89/WordPress_vs_Kali/blob/master/user%20enumeration.gif" width=800>
 
 ## Resources
 
