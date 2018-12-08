@@ -5,6 +5,9 @@ Time spent: 25 hours spent in total
 > Objective: Find, analyze, recreate, and document **three vulnerabilities** affecting an old version of WordPress
 
 ## Pentesting Report
+
+For these assigment three vulnerabilities that were affecting an old version of WordPress were found:
+
 1. Vulnerability: Stored XSS in WP
 
     In a Post XSS <script>alert(document.cookie);</script> in the comments section:
