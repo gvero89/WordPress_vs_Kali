@@ -1,44 +1,28 @@
 # WordPress_vs_Kali
 # Project 7 - WordPress Pentesting
-Time spent: **4** hours spent in total
+Time spent: 25 hours spent in total
 
 > Objective: Find, analyze, recreate, and document **three vulnerabilities** affecting an old version of WordPress
 
 ## Pentesting Report
-1. (Required) XSS in URL Embeds
-  - [ ] Summary: 
-    - Vulnerability types: Stored XSS in WP Core
-    - Tested in version: 4.2
-    - Fixed in version: 4.2.13
-  - [ ] GIF Walkthrough:
-  - [ ] Steps to recreate: Open up a new post and add an embedded YouTube video URL. In the URL, add an XSS at the end. For this example, "svg onload=alert(1)" was used to show a pop-up alert everytime the video would load. 
-  
-  - [ ] Affected source code:
-    - [Link 1](https://github.com/WordPress/WordPress/commit/419c8d97ce8df7d5004ee0b566bc5e095f0a6ca8)
+1. Vulnerability: Stored XSS in WP
+    In a Post XSS <script>alert(document.cookie);</script> in the comments section:
     
-2. (Required) XSS in Embed YouTube URLs
-  - [ ] Summary: 
-    - Vulnerability types: XSS
-    - Tested in version: 4.2
-    - Fixed in version: 4.2.13
   - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: Open up a new post, and insert the embedded link for a YouTube video. At the end of the main embedded video statement, add an alert whenever the video loads. In this case, "onload=alert(123456789)" was the alert used. 
-  - [ ] Affected source code:
-    - [Link 2](https://github.com/WordPress/WordPress/commit/419c8d97ce8df7d5004ee0b566bc5e095f0a6ca8)
-
-3. (Required) Stored XSS
-  - [ ] Summary: 
-    - Vulnerability types: XSS
-    - Tested in version: 4.2 
-    - Fixed in version: 4.2.3
+ 
+2. Vulnerability: Authenticated Stored Cross-Site Scripting
+    Steps: Select Post -> Add new post -> <a onmouseover="alert('I got you!')">click here</a> -> click preview
+    
   - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: Create a new post, and insert "a href="[caption code=">]</a><a title=" onmouseover=alert('test') ">link</a" in the body
-  - [ ] Affected source code:
-    - [Link 3](https://klikki.fi/adv/wordpress3.html)
 
-## Assets
-
-List any additional assets, such as scripts or files
+3. Vulnerability: User Enumeration
+    Steps: WordPress login page -> In admin write: username and password field will stay empty. 
+           An Error will show: password field is empty.
+           In admin write: username and in password: input any password.
+           An Error will show: password you entered for the username admin is incorrect. 
+           When a randomly username and password is added, shows the error which is invalid username.
+           
+  - [ ] GIF Walkthrough: 
 
 ## Resources
 
